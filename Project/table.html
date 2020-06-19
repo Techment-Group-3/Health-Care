@@ -1,0 +1,123 @@
+<html>
+<head>
+<title> Appointment Setup</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<link rel="stylesheet" href="table_style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="patient_home.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Welcome!!!</a>
+    <a href="patient_home.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
+    <a href="lab/Department.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Services</a>
+    <a href="Admin/index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Administration</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">FAQs</a>
+    <a href="Doctor/doctor_login.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Doctors' Login</a>
+    <a href="homepage.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">SignOut</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="table.html">Prev Appointment Info</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="setAppointment.html">Appointment Booking</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="lab/Department.html">Labs and Testing</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+<div class="container">
+  <div class="item">
+    <label for="mail">Email address<span>*</span></label><br>
+    <input id="mail" type="email" name="mail" required/>
+  </div>
+   <div class="item">
+    <label for="initial">Password<span>*</span></label><br>
+    <input id="password" type="password" name="password" required/>
+  </div><br>
+  <input type="submit" id="addhosbtn" name="addhosbtn" value="View">
+</div>
+
+  <table class="responsive-table">
+    <caption><h1>Your list of appointments</h1></caption>
+    <thead>
+      <tr>
+        <th scope="col">Appointment No.</th>
+        <th scope="col">Patient Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+        <th scope="col">Date</th>
+        <th scope="col">Time</th>
+        <th scope="col">Attending</th>
+        <th scope="col">Problem</th>
+      </tr>
+    </thead>
+    <tbody id="tablebody">
+
+    </tbody>
+  </table>
+
+
+  <script>
+
+    const url = 'http://localhost:3000/appointments';
+    getUser();
+
+    addhosbtn.onclick = getUser;
+    function getUser() {
+      axios.get(url,{
+        params:{        
+        pat_email: mail.value,
+        pat_pwd: password.value
+}
+
+      })
+        .then(resp => {
+          data = resp.data;
+          tablebody.innerHTML = createTable(data);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+    function createTable(data) {
+
+      let table =''
+
+      data.map(e => {
+        table += `<tr><td>${e.id}</td> <td>${e.pat_name}</td> <td>${e.pat_email}</td> <td>${e.pat_pwd}</td> <td>${e.p_date}</td> <td>${e.p_time}</td><td>${e.doc_name}</td><td>${e.problem}</td></tr>`
+      })
+      return table;
+    }
+  </script>
+
+</body>
+</html>
