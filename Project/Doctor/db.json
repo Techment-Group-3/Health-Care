@@ -1,0 +1,39 @@
+{
+  "Doctors": [
+    {
+      "id": 1,
+      "first_name": "Mr.Ved",
+      "last_name": "Sahu",
+      "email": "ved@gmail.com",
+      "password":"1234"
+    },
+    {
+      "id": 2,
+      "first_name": "Miss Neha",
+      "last_name": "Rai",
+      "email": "neha56@gmail.com",
+      "password":"1234"
+    },
+    {
+      "id": 3,
+      "first_name": "Mr.Kawle",
+      "last_name": "Das",
+      "email": "das23@gmail.com",
+      "password":"1234"
+    },
+    {
+      "id": 4,
+      "first_name": "Robert",
+      "last_name": "Brown",
+      "email": "bobbrown432@yahoo.com",
+      "password":"1234"
+    },
+    {
+      "id": 5,
+      "first_name": "Roger",
+      "last_name": "Bacon",
+      "email": "rogerbacon12@yahoo.com",
+      "password":"1234"
+    }
+  ]
+}    

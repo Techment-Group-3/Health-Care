@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  input[type=text],
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  input[type=reset] {
+    width: 100%;
+    background-color:aqua;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=reset]:hover {
+    background-color:aqua;
+  }
+
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .w3-sidebar {
+    z-index: 3;
+    width: 250px;
+    top: 83px;
+    bottom: 0;
+    height: inherit;
+  }
+</style>
+
+<body>
+   <!-- Navbar -->
+   <div class="w3-top">
+    <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+      <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1"
+        href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-theme-l1">Hospital</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">View Profile</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Update Profile</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Add Prescription</a>
+     
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+      class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <h4 class="w3-bar-item"><b>Prescription</b></h4>
+    <a class="w3-bar-item w3-button w3-hover-black" href="Addprescription.html">Add</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="Addprescription.html">Update</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="#">Delete</a>
+  </nav>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    id="myOverlay"></div>
+
+  <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+  <div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container" style="margin-left:150px">
+        <h1 class="w3-text-teal">Update Prescription </h1>
+        <div>
+          <div id="addhos">
+            <label for="fname">Doctor Name</label>
+            <input type="text" id="docid" name="docid" placeholder="Enter Name"   required>
+
+            <label for="lname">Patient Name</label>
+            <input type="text" id="pname" name="pname" placeholder="Enter Patient Name" required>
+
+            <label for="lname">Patient Age</label>
+            <input type="text" id="age" name="age" placeholder="Enter Patient Age" required>
+
+            <label for="lname">Gender</label>
+            <input type="text" id="gender" name="gender" placeholder="Enter Gender" required>
+
+            <label for="lname">Contact Number</label>
+            <input type="text" id="contact" name="contact" placeholder="Enter Contact Number" required>
+
+            <label for="lname">Type Of Diseases</label>
+            <input type="text" id="dis" name="dis" placeholder="Enter Diseases Name" required>
+
+            <label for="lname">Test</label>
+            <input type="text" id="test" name="test" placeholder="Enter Required Test" required>
+
+            <label for="lname">Medicines</label>
+            <input type="text" id="medicine" name="medicine" placeholder="Enter Required Medicines" required>
+
+
+            <input type="submit" id="updateprescription" name="updateprescription" value="UPDATE">
+            <input type="reset"  value="Reset">
+
+           
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <footer id="myFooter">
+      <div class="w3-container w3-theme-l2 w3-padding-32">
+        <h4>Health Care</h4>
+      </div>
+    </footer>
+
+    <!-- END MAIN -->
+  </div>
+
+  <script>
+
+    const url = 'http://localhost:3001/Prescription'
+
+    updateprescription.onclick = function (e) {
+      //debugger ;
+      e.preventDefault();
+      addUser();
+    };
+
+    updateprescription.onclick = function (e) {
+      //debugger ;
+      e.preventDefault();
+      updateUser();
+    };
+
+    function updateUser() {
+
+      let docname = docid.value;
+      let patientname = pname.value;
+      let agee= age.value;
+      let sex=gender.value;
+      let mobile = contact.value;
+      let diseases=dis.value;
+      let testing = test.value;
+      let medi = medicine.value;
+
+      axios.put(url +"/" +id +"/",{
+        mobile,
+        diseases,
+        testing,
+        medi
+      })
+        .then(function () { alert("Record updated!") }).catch(function (er) { alert("Error!"); console.error(er) });
+    }
+
+    
+
+
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+  </script>
+</body>
+
+</html>

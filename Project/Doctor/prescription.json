@@ -1,0 +1,36 @@
+{
+  "Prescription": [
+    {
+      "docname": "Dr. Kawale",
+      "patientname": "Anjali Gupta",
+      "agee": "20",
+      "sex": "female",
+      "mobile": "4568723941",
+      "testing": "Blood Test",
+      "medi": "Peracetamol",
+      "id": 1
+    },
+    {
+      "docname": "Dr.Nisha Jain",
+      "patientname": "Monarch patel",
+      "agee": "25",
+      "sex": "male",
+      "mobile": "7898381794",
+      "diseases": "fever",
+      "testing": "Blood test",
+      "medi": "Peracetamol",
+      "id": 2
+    },
+    {
+      "docname": "Dr. Nirmala Thakur",
+      "patientname": "Anita Kurve",
+      "agee": "30",
+      "sex": "female",
+      "mobile": "7898381794",
+      "diseases": "fever",
+      "testing": "Blood Test",
+      "medi": "Antibiotic-4",
+      "id": 3
+    }
+  ]
+}
