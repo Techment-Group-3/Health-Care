@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Team 3 Laboratories  </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/Team 3 Laboratories" />
+  <link
+    rel="stylesheet"
+    href="https://www.w3schools.com/lib/w3-theme-black.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto"
+  />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Roboto", sans-serif;
+    }
+    .w3-sidebar {
+      z-index: 3;
+      width: 250px;
+      top: 43px;
+      bottom: 0;
+      height: inherit;
+    }
+    .card-parent{
+      display:flex;
+      margin:25px
+    }
+
+    .card{
+      margin:10px;
+    }
+    .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    
+  </style>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="./laboratories.html">LABORATORIES</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: end;">
+
+          <form class="form-inline my-2 my-lg-0" >
+
+          <input class="form-control mr-sm-2" type="search" placeholder="Enter City Name" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Our Center</button>
+        </form>
+      </div>
+    </nav>
+
+   
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large"
+      onclick="w3_close()"
+      style="cursor: pointer;"
+      title="close side menu"
+      id="myOverlay"
+         >
+      </div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" >
+      <div class="w3-row">
+        <div class=" w3-container">
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+           
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+               
+              
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    For Patient
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href='./TestBooking.html'>Test Booking</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="./Report.html">Reports</a>
+                      
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Departments
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="./Department.html#hematology">Hematology</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="./Department.html#chemistry">Chemistry</a>
+                      <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="./Department.html#cytology">Cytology</a>
+                      <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="./Department.html#surgical">Surgical Pathology</a>
+                     <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="./Department.html#immunology">Immunology</a>
+                  </div>
+                </li>
+               
+              </ul>
+             
+            </div>
+          </nav>
+        </div>
+        
+      <div class="card-container">
+           <h1 class="display-4">TestBooking</h1>
+
+        <div class="card-parent">
+          <div class="card" style="width: 18rem;    ">
+              <div class="card-body">
+                <h5 class="card-title">COVID 19</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="Testing.html" class="btn btn-primary">Book this test</a>
+              </div>
+            </div>
+          <div class="card" style="width: 18rem;">
+
+              <div class="card-body">
+                <h5 class="card-title">LIPID PANEL</h5>
+                <p class="card-text">The lipid panel is a group of tests used to evaluate cardiac risk. It includes cholesterol and triglyceride levels.</p>
+                <a href="Testing.html" class="btn btn-primary">Book this test</a>
+              </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+
+              <div class="card-body">
+                <h5 class="card-title">THYROID HARMONE</h5>
+                <p class="card-text">This test screens and monitors the function of the thyroid.</p>
+                <a href="Testing.html" class="btn btn-primary">Book this test</a>
+              </div>
+            </div>
+             </div>
+
+            <div class="card-parent">
+              <div class="card" style="width: 18rem;">
+
+              <div class="card-body">
+                <h5 class="card-title">CBC</h5>
+                <p class="card-text">This test, also known as a Complete Blood Count, is the most common blood test performed. It measures the types and numbers of cells in the blood, including red and white blood cells and platelets. .</p>
+                <a href="Testing.html" class="btn btn-primary">Book this test</a>
+              </div>
+            </div>
+             <div class="card" style="width: 18rem;">
+
+              <div class="card-body">
+                <h5 class="card-title">Basic Metabolic Panel</h5>
+                <p class="card-text">This test measures glucose, sodium, potassium, calcium, chloride, carbon dioxide, blood urea nitrogen and creatinine which can help determine blood sugar level, electrolyte and fluid balance as well as kidney function.</p>
+                <a href="Testing.html" class="btn btn-primary">Book this test</a>
+              </div>
+            </div>
+             <div class="card" style="width: 18rem;">
+
+              <div class="card-body">
+                <h5 class="card-title">Comprehensive Metabolic Panel</h5>
+                <p class="card-text">This test combines the Basic Metabolic Panel with six more tests for a more comprehensive evaluation of metabolic functions, with a focus on organ systems.</p>
+                <a href="Testing.html" class="btn btn-primary">Book this test</a>
+              </div>
+            </div>
+
+      </div>
+    
+
+      </div>
+   
+          
+   
+      <!--
+ Pagination -->
+  
+   
+
+      <!-- END MAIN -->
+    </div>
+
+   
+  </body>
+</html>

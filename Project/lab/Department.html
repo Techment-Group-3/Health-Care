@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Team 3 Laboratories </title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/Team 3 Laboratories" />
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .w3-sidebar {
+    z-index: 3;
+    width: 250px;
+    top: 43px;
+    bottom: 0;
+    height: inherit;
+  }
+
+  .card-parent {
+    /*display:flex;*/
+    margin: 25px
+  }
+
+  .card {
+    margin: 10px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./laboratories.html">LABORATORIES</a>
+    <a href="/HospitalDashboard.html" class="w3-bar-item w3-button w3-theme-l1">Hospital</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: end;">
+    </div>
+  </nav>
+
+
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor: pointer;" title="close side menu"
+    id="myOverlay">
+  </div>
+
+  <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+  <div class="w3-main">
+    <div class="w3-row">
+      <div class=" w3-container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  For Patient
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href='./TestBooking.html'>Test Booking</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./Report.html">Reports</a>
+
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="Department.html" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Departments
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="./Department.html#hematology">Hematology</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./Department.html#chemistry">Chemistry</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./Department.html#cytology">Cytology</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./Department.html#surgical">Surgical Pathology</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./Department.html#immunology">Immunology</a>
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+        </nav>
+      </div>
+
+
+      <div class="card-container">
+        <h1 class="display-4">Departments</h1>
+
+        <div class="card-parent">
+          <div class="card">
+            <div class="card-body" name="hematology">
+              <a name="hematology"></a>
+              <h5 class="card-title">HEMATOLOGY</h5>
+              <p class="card-text">Hematology is the study of blood, blood morphology and blood diseases. Hematologists
+                count and classify blood cells into different categories. Coagulation is the study of the clotting
+                activity of blood.</p>
+            </div>
+          </div>
+          <div class="card">
+
+            <div class="card-body" name="chemistry">
+              <a name="chemistry"></a>
+              <h5 class="card-title">CHEMISTRY</h5>
+              <p class="card-text">Chemistry performs a wide variety of tests using the most current technology. It is
+                defined as the scientific study of matter and the various compounds of the elements as it relates to the
+                human body. Common tests analyzed in the chemistry laboratory are glucose, cholesterol, BUN, creatinine,
+                potassium, liver and heart enzymes, thyroid tests and hormone tests, and PSA.</p>
+            </div>
+          </div>
+          <div class="card">
+
+            <div class="card-body" name="cytology">
+              <a name="cytology"></a>
+              <h5 class="card-title">CYTOLOGY</h5>
+              <p class="card-text">In cytology, a skilled cytotechnologist examines human cells under the microscope,
+                looking for early signs of cancer and other diseases. The most common type of specimen processed in the
+                Cytology department is the Pap smear. Chemistry performs a wide variety of tests using the most current
+                technology. It is defined as the scientific study of matter and the various compounds of the elements as
+                it relates to the human body. Common tests analyzed in the chemistry laboratory are glucose,
+                cholesterol, BUN, creatinine, potassium, liver and heart enzymes, thyroid tests and hormone tests, and
+                PSA.Chemistry performs a wide variety of tests using the most current technology. It is defined as the
+                scientific study of matter and the various compounds of the elements as it relates to the human body.
+                Common tests analyzed in the chemistry laboratory are glucose, cholesterol, BUN, creatinine, potassium,
+                liver and heart enzymes, thyroid tests and hormone tests, and PSA.Chemistry performs a wide variety of
+                tests using the most current technology. It is defined as the scientific study of matter and the various
+                compounds of the elements as it relates to the human body. Common tests analyzed in the chemistry
+                laboratory are glucose, cholesterol, BUN, creatinine, potassium, liver and heart enzymes, thyroid tests
+                and hormone tests, and PSA.Chemistry performs a wide variety of tests using the most current technology.
+                It is defined as the scientific study of matter and the various compounds of the elements as it relates
+                to the human body. Common tests analyzed in the chemistry laboratory are glucose, cholesterol, BUN,
+                creatinine, potassium, liver and heart enzymes, thyroid tests and hormone tests, and PSA.</p>
+            </div>
+          </div>
+
+          <div class="card">
+
+            <div class="card-body" name="surgical">
+              <a name="surgical"></a>
+              <h5 class="card-title">SURGICAL PATHOLOGY</h5>
+              <p class="card-text">Pathology is the branch of medicine, which treats the essential nature of disease,
+                especially the structural and functional changes in tissues and organs of the body, which cause or are
+                caused by disease.</p>
+            </div>
+          </div>
+          <div class="card" name="immunology">
+            <a name="immunology"></a>
+
+            <div class="card-body">
+              <h5 class="card-title">IMMUNOLOGY</h5>
+              <p class="card-text"> Immunology is the study of immune products such as antibodies produced by the body
+                in response to foreign material.</p>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!--
+ Pagination -->
+
+
+
+      <!-- END MAIN -->
+    </div>
+
+
+</body>
+
+</html>
