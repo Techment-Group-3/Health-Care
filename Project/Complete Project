@@ -1,0 +1,24 @@
+1. MODULES:
+The entire project mainly consists of 4 modules, which are
+
+Admin module---→Bushra Yasmin
+manage department of hospitals:- Insert, Update and View record
+  
+Doctor module---->Pooja Sahu
+Create prescription for patient and View Prescription 
+Create Login with Social Media(Google API)
+Provide medication for patients
+
+
+User module (patient)--->Akriti Ghosh
+Add/edit/delete/manage patient details
+Manage the list of symptoms, tests and prognosis
+Set appointments with doctors
+Set appointments for tests in laboratories
+View and take note of patient history such as previous appointments, tests, medications;
+ 
+
+Laboratorist module--->Amber Kesharwani
+Book test for patient
+Create report of test for patient
+Manage the department for test
