@@ -1,0 +1,239 @@
+{
+  "users": [
+    {
+      "pat_name": "Akriti",
+      "pat_email": "akriti@mail.com",
+      "pat_pwd": "0000",
+      "p_dob": "1998-10-21",
+      "p_no": "964411224",
+      "id": 1
+    },
+    {
+      "pat_name": "Pooja",
+      "pat_email": "psahu@tech.com",
+      "pat_pwd": "1234",
+      "p_dob": "1995-11-29",
+      "p_no": "9876543210",
+      "id": 2
+    }
+  ],
+  "doctors": [
+    {
+      "id": 1,
+      "first_name": "Mr.Ved",
+      "last_name": "Sahu",
+      "email": "ved@gmail.com",
+      "password":"1234"
+    },
+    {
+      "id": 2,
+      "first_name": "Miss Neha",
+      "last_name": "Rai",
+      "email": "neha56@gmail.com",
+      "password":"1234"
+    },
+    {
+      "id": 3,
+      "first_name": "Mr.Kawle",
+      "last_name": "Das",
+      "email": "das23@gmail.com",
+      "password":"1234"
+    },
+    {
+      "id": 4,
+      "first_name": "Robert",
+      "last_name": "Brown",
+      "email": "bobbrown432@yahoo.com",
+      "password":"1234"
+    },
+    {
+      "id": 5,
+      "first_name": "Roger",
+      "last_name": "Bacon",
+      "email": "rogerbacon12@yahoo.com",
+      "password":"1234"
+    }
+  ],
+  "appointments": [
+    {
+      "pat_name": "X",
+      "pat_email": "msx@abc.in",
+      "pat_pwd": "0000",
+      "p_date": "2020-11-11",
+      "p_time": "Morning",
+      "doc_name": "ABC",
+      "problem": "Flu",
+      "id": 1
+    },
+    {
+      "pat_name": "Akriti",
+      "pat_email": "akriti98@gmail.com",
+      "pat_pwd": "12345",
+      "p_date": "2020-10-21",
+      "p_time": "Morning",
+      "doc_name": "Dr.X",
+      "problem": "Cough",
+      "id": 2
+    }
+  ],
+  "hospitals": 
+    [
+      {
+        "id": 1,
+        "name": "Sector-9 Hospital",
+        "address": "Bhilai",
+        "street": "durg",
+        "pincode": 491001,
+        "state": "Chhattisgarh"
+      },
+      {
+        "id": 2,
+        "name": "Ghandhi Nagar Hospital",
+        "address": "123-E Green Park Colony",
+        "street": "Indore",
+        "pincode": 452002,
+        " state": "Madhya Pradesh"
+      },
+      {
+        "id": 3,
+        "pincode": 23,
+        "name": "ddff",
+        "address": "dffrfe",
+        "street": "lkfvnf",
+        "state": "fjv,bf,jd"
+      },
+      {
+        "id": "5",
+        "name": "dsf",
+        "address": "Kasaridhi",
+        "street": "",
+        "pincode": "491001",
+        "state": "Chhattisgarh"
+      },
+      {
+        "name": "ndsmb",
+        "address": "nmdfbds",
+        "street": "jds,bf",
+        "pincode": "43",
+        "state": "dsbfsj",
+        "id": "4"
+      },
+      {
+        "name": "Sector-9",
+        "address": "bhilai",
+        "street": "durg",
+        "pincode": "491001",
+        "state": "CHHATTISGARH",
+        "id": "6"
+      },
+      {
+        "id": "7",
+        "name": "chandulal",
+        "address": "bhilai",
+        "street": "durg",
+        "pincode": "491001",
+        "state": "Chhattisgarh"
+      }
+    ],
+    "user": [
+      {
+        "id": 1,
+         "typeofuser":"Docter",
+        "first_name": "Robert",
+        "last_name": "Schwartz",
+        "email": "rob23@gmail.com"
+      },
+      {
+        "id": 2,
+         "typeofuser":"Docter",
+        "first_name": "Lucy",
+        "last_name": "Ballmer",
+        "email": "lucyb56@gmail.com"
+      },
+      {
+        "id": 3,
+         "typeofuser":"Patient",
+        "first_name": "Anna",
+        "last_name": "Smith",
+        "email": "annasmith23@gmail.com"
+      },
+      {
+        "id": 4,
+         "typeofuser":"Patient",
+        "first_name": "Robert",
+        "last_name": "Brown",
+        "email": "bobbrown432@yahoo.com"
+      },
+      {
+        "id": 5,
+         "typeofuser":"Lab Assistent",
+        "first_name": "Roger",
+        "last_name": "Bacon",
+        "email": "rogerbacon12@yahoo.com"
+      },
+      {
+         "typeofuser":"Lab Assistent",
+        "first_name": "jn",
+        "last_name": "n",
+        "email": "bushrayasmin1998@gmail.com",
+        "id": 6
+      },
+      {
+         "typeofuser":"Lab Assistent",
+        "first_name": "jn",
+        "last_name": "n",
+        "email": "bushrayasmin1998@gmail.com",
+        "id": 7
+      }
+
+  
+  ],
+  "labs": [
+    {
+      "pat_id": "1",
+      "pat_name": "Harry Potter",
+      "pat_email": "hp@rowling.com",
+      "pat_sex": "Male",
+      "pat_age": "21",
+      "test": "harmone",
+      "p_date": "2020-06-20",
+      "p_time": "Morning",
+      "id": 1
+    }
+  ],
+  "Prescription": [
+    {
+      "docname": "Dr. Kawale",
+      "patientname": "Anjali Gupta",
+      "agee": "20",
+      "sex": "female",
+      "mobile": "4568723941",
+      "testing": "Blood Test",
+      "medi": "Peracetamol",
+      "id": 1
+    },
+    {
+      "docname": "Dr.Nisha Jain",
+      "patientname": "Monarch patel",
+      "agee": "25",
+      "sex": "male",
+      "mobile": "7898381794",
+      "diseases": "fever",
+      "testing": "Blood test",
+      "medi": "Peracetamol",
+      "id": 2
+    },
+    {
+      "docname": "Dr. Nirmala Thakur",
+      "patientname": "Anita Kurve",
+      "agee": "30",
+      "sex": "female",
+      "mobile": "7898381794",
+      "diseases": "fever",
+      "testing": "Blood Test",
+      "medi": "Antibiotic-4",
+      "id": 3
+    }
+  ]
+
+}
