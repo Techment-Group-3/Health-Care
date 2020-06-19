@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="tabledata"></div>
+  <div>
+    <input type="text" id="fname" placeholder="fname">
+    <input type="text" id="lname" placeholder="lname">
+    <input type="text" id="email" placeholder="email">
+    <button id="adduserbtn">add</button>
+  </div>
+  <div>
+    <input type="text" id="user_id" placeholder="id">
+    <input type="text" id="ufname" placeholder="fname">
+    <input type="text" id="ulname" placeholder="lname">
+    <input type="text" id="uemail" placeholder="email">
+    <button id="updateuserbtn">update</button>
+  </div>
+
+  <script>
+    const url = 'http://localhost:3000/user';
+    getUser();
+
+    adduserbtn.onclick = addUser;
+    updateuserbtn.onclick = updateUser;
+
+    function getUser() {
+      axios.get(url)
+        .then(resp => {
+          data = resp.data;
+          tabledata.innerHTML = createTable(data);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+
+    function addUser() {
+      let first_name = fname.value;
+      let last_name = lname.value;
+      let _email = email.value;
+
+      axios.post(url, {
+          first_name,
+          last_name,
+          email: _email
+        })
+        .then(getUser);
+    }
+
+    function updateUser() {
+      let userid = user_id.value;
+      let first_name = ufname.value;
+      let last_name = ulname.value;
+      let _email = uemail.value;
+
+      console.log(userid);
+
+      axios.put(url + '/' + userid + '/', {
+          first_name,
+          last_name,
+          email: _email
+        })
+        .then(getUser);
+    }
+
+    function createTable(data) {
+      let table = '<table border=1>'
+
+      data.map(e => {
+        table += `<tr><td>${e.first_name}</td> <td>${e.last_name}</td> <td>${e.email}</td><tr>`
+      })
+
+      table += '</table>';
+      return table;
+    }
+  </script>
+</body>
+
+</html>
