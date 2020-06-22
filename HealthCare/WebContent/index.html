@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+ <meta name="google-signin-client_id" content="260840974427-bt053ahkk766kscabcrfqnp8kprk5p37.apps.googleusercontent.com">
+
+<title>Welcome to Health Care</title>
+
+
+<style>
+</style>
+
+	 <script type="text/javascript"> 
+	 function onSignIn(googleUser) { // window.location.href='success.jsp';
+		 var profile = googleUser.getBasicProfile(); 
+		 var imagurl=profile.getImageUrl();
+		 var name=profile.getName(); 
+		 var email=profile.getEmail();
+		 document.getElementById("myImg").src = imagurl; 
+		 document.getElementById("name").innerHTML = name;
+		 document.getElementById("myP").style.visibility = "hidden"; 
+		 document.getElementById("status").innerHTML = 'Welcome '+name+'!<a href=success.jsp?email='+email+'&name='+name+'/>Continue with Google login</a></p>' 
+				 }
+	 function myFunction() { 
+		 gapi.auth2.getAuthInstance().disconnect(); 
+		 location.reload(); } 
+	</script>
+</head>
+<body>
+	
+	<div class="login">
+	<center>
+			<h1>Login</h1>
+	</center>	<form><center>
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username"><br><br>
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password"><br><br>
+				<input type="submit" value="Login"><br><br>
+				<div>or</div><br>
+				<div class="g-signin2" data-onsuccess="onSignIn" id="myP"></div>	
+			</center></form>	
+		</div>
+		
+</body>
+</html>
