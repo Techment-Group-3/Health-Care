@@ -1,0 +1,28 @@
+{
+  "hospitals": [
+	    { 
+	    	"id": 1, 
+	    	"name": "Sector-9 Hospital", 
+	    	"location":[
+	    		{
+	    			"address" : "Bhilai", 
+	    			"street": "durg",
+	    			"pincode" : 491001,
+	    			 "state" :"Chhattisgarh"
+	    			}
+	    		 ]
+	   	  },
+	   	  {
+	    	"id": 2, 
+	    	"name": "Ghandhi Nagar Hospital", 
+	    	"location":[
+	    		{
+	    			"address" : "123-E Green Park Colony", 
+	    			"street": "Indore",
+	    			"pincode" : 452002,
+	    			" state" :"Madhya Pradesh"
+	    			}
+	    		 ]
+	   	  }
+	  ]
+}
